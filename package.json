@@ -1,7 +1,7 @@
 {
   "name": "use-a11y",
   "version": "0.0.1",
-  "description": "",
+  "description": "React hooks for a11y components",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "files": [
@@ -20,7 +20,11 @@
     "typescript"
   ],
   "author": "Ho Won Cheng",
-  "license": "ISC",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenghw/use-a11y.git"
+  },
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"

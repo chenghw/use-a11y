@@ -13,7 +13,7 @@ const COMPONENT = 'accordion';
 
 interface Props {
   count: number;
-  initialSelectedIndexes: number[];
+  initialSelectedIndexes?: number[];
   multiple?: boolean;
   toggleable?: boolean;
 }
@@ -147,13 +147,12 @@ function useAccordion(props: Props): Output {
         multiple,
         toggleable,
       } = initialProps;
+      const indexes = initialSelectedIndexes || [];
       return {
         count,
         multiple: Boolean(multiple),
         props: initialProps,
-        selectedIndexes: new Set(
-          multiple ? initialSelectedIndexes : initialSelectedIndexes.slice(0, 1)
-        ),
+        selectedIndexes: new Set(multiple ? indexes : indexes.slice(0, 1)),
         toggleable: Boolean(toggleable),
       };
     }
